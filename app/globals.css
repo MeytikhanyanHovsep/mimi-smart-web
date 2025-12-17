@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+body {
+  background: #F4F4F4;
+}
+
+.floor-shadow {
+  background: radial-gradient(#FDFDFD, #FDFDFD, #ffcf9998, rgba(255, 207, 153, 0.664), #ffffff00, #ffffff00, #ffffff00);
+  border-radius: 50%;
+}
