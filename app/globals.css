@@ -1,10 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
 
 body {
   background: #F4F4F4;
+  transition: 0.3s;
+  font-family: "Roboto", sans-serif;
 }
 
 .floor-shadow {
   background: radial-gradient(#FDFDFD, #FDFDFD, #ffcf9998, rgba(255, 207, 153, 0.664), #ffffff00, #ffffff00, #ffffff00);
   border-radius: 50%;
+}
+
+.floor-shadow-dark {
+  background: radial-gradient(#ffffff2c, #ffffff2c, #d9b37b1c, #d9b37b1c, #ffffff00, #ffffff00, #ffffff00);
+  border-radius: 50%;
+}
+
+
+.dark-bg {
+  background: #0B0D10;
 }
