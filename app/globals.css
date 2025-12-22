@@ -23,3 +23,95 @@ body {
 .dark-bg {
   background: #0B0D10;
 }
+
+.home-grid {
+  display: grid;
+  grid-template-columns: repeat(20, 1fr);
+  grid-template-rows: repeat(13, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+
+
+.home-item-1 {
+  grid-area: 1 / 1 / 5 / 4;
+}
+
+.home-item-2 {
+  grid-area: 5 / 1 / 7 / 4;
+}
+
+.home-item-3 {
+  grid-area: 7 / 1 / 10 / 4;
+}
+
+.home-item-4 {
+  grid-area: 10 / 1 / 14 / 3;
+}
+
+.home-item-5 {
+  grid-area: 10 / 3 / 13 / 11;
+}
+
+.home-item-6 {
+  grid-area: 7 / 14 / 12 / 18;
+}
+
+.home-item-7 {
+  grid-area: 3 / 14 / 7 / 18;
+}
+
+.home-item-8 {
+  grid-area: 9 / 11 / 13 / 14;
+}
+
+.home-item-9 {
+  grid-area: 3 / 18 / 14 / 21;
+}
+
+.home-item-10 {
+  grid-area: 2 / 15 / 3 / 17;
+}
+
+.home-item-11 {
+  grid-area: 7 / 4 / 10 / 8;
+}
+
+
+.home-item-12 {
+  grid-area: 2 / 4 / 7 / 8;
+}
+
+
+.wall-top-light {
+  border-color: #F9FBFC;
+}
+
+.wall-top-dark {
+  border-color: #333;
+
+}
+
+
+.border-top-light {
+  background: #F9FBFC;
+}
+
+
+.border-top-dark {
+  background: #333 !important;
+}
+
+
+
+
+.home-grid span,
+.home-grid div,
+.home-grid img {
+  transition: 0.7s !important;
+}
+
+.home-grid .duration-1000 {
+  transition: 0.7s !important;
+}
