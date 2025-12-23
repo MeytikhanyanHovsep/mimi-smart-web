@@ -41,10 +41,10 @@ export default function Header({}: Props) {
                 </nav>
                 <button
                     className={
-                        "py-[8px] px-[16px] bg-white flex font-bold gap-[5px] items-center max-md:aspect-square max-md:rounded-[100%] dark:bg-[#00D0FF] dark:text-[white] rounded-[20px] text-[14px] "
+                        "py-[8px] px-[16px] bg-white flex font-bold gap-[5px] items-center transition-colors duration-300 max-md:aspect-square max-md:rounded-[100%] dark:bg-[#00D0FF] dark:text-[white] rounded-[20px] text-[14px] "
                     }
                 >
-                    <Phone className="w-[15px] dark:fill-white fill-black dark:text-white" />
+                    <Phone className="w-[15px] dark:fill-white fill-black dark:text-white transition-colors duration-300" />
                     <span className="max-md:hidden"> Контакты</span>
                 </button>
             </div>
