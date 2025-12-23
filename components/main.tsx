@@ -8,6 +8,7 @@
 
 import React, { useEffect, useState } from "react";
 import SmartHomeItems from "./smartHomeItems";
+import Image from "next/image";
 
 type Props = {};
 
@@ -29,16 +30,11 @@ export default function Main({}: Props) {
     };
 
     return (
-        <main className="dark:bg-[#0B0D10] overflow-auto transition-colors duration-1000">
-            <SmartHomeItems isDark={theme == "dark"} />
-            <div className="p-[100px] absolute top-[100px] left-[300px] z-100">
-                <button
-                    onClick={toggleTheme}
-                    className="bg-blue-950 p-[20px] text-[white]"
-                >
-                    Switch
-                </button>
-            </div>
+        <main className="dark:bg-[#0B0D10] overflow-hidden transition-colors duration-300">
+            <SmartHomeItems
+                isDark={theme == "dark"}
+                toggleTheme={() => toggleTheme()}
+            />
         </main>
     );
 }

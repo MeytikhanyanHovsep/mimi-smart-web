@@ -43,25 +43,15 @@ export default function Item8({ isDark }: Props) {
                         }`}
                     />
                 </div>
-                <div className="group w-[70px] rotate-180 flex justify-end relative pt-[13px]">
-                    {/* Контейнер для трапеции */}
-                    <div className="dark:opacity-0 h-[90px] rotate-178 w-[50px] absolute top-[5px] right-[18px] z-1 [clip-path:polygon(0%_20%,100%_0%,100%_100%,0%_80%)]">
-                        {/* Градиент для LIGHT темы (плавный opacity) */}
+                <div className="group w-[70px] ml-[-7px] rotate-180 flex justify-end relative pt-[13px]">
+                    <div className="h-[90px] rotate-178 w-[70px] absolute top-[5px] right-[18px] z-1 [clip-path:polygon(0%_20%,100%_0%,100%_100%,0%_80%)]">
                         <div
-                            className="absolute inset-0 bg-linear-to-b from-[#C9E7EF] to-[#A7D8E5] 
-                            opacity-0 group-hover:opacity-100 dark:group-hover:opacity-0
-                            transition-opacity duration-500 ease-in-out"
-                        ></div>
-
-                        {/* Градиент для DARK темы (плавный opacity) */}
-                        <div
-                            className="absolute inset-0 bg-linear-to-b from-[#1e293b] to-[#334155] 
-                            opacity-0 dark:group-hover:opacity-100
+                            className="absolute inset-0 bg-linear-to-r dark:from-[gray] from-[#C9E7EF] to-[#ffffff00] 
+                            opacity-0 group-hover:opacity-100 
                             transition-opacity duration-500 ease-in-out"
                         ></div>
                     </div>
 
-                    {/* Контент с картинками (Conditioner) */}
                     <div className="relative mr-[7px] w-max h-[68px] z-10">
                         <Image
                             src="/assets/condition.png"

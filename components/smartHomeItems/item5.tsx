@@ -63,7 +63,7 @@ export default function Item5({ isDark }: Props) {
                         height={30}
                         className={`transition-all   object-cover  duration-1000 h-[28px] z-10 absolute top-0 right-0!   ${
                             isDark
-                                ? "opacity-100 w-[50%]"
+                                ? "opacity-100 w-[55%]"
                                 : "opacity-0 w-[17px]"
                         }`}
                     />

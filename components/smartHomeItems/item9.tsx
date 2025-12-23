@@ -36,6 +36,9 @@ export default function Item9({ isDark }: Props) {
                 </div>
 
                 <div className="absolute w-[15px] top-[5px] left-0 -rotate-90 h-[15px] ">
+                    <div className=" h-[60px] rotate-145 w-[40px] absolute top-[-6px] right-[9px] z-1 [clip-path:polygon(0%_40%,100%_0%,100%_100%,0%_60%)]">
+                        <div className="absolute inset-0 bg-linear-to-r dark:from-[#808080b0] from-[#C9E7EF] to-[#ffffff00]  duration-500 ease-in-out"></div>
+                    </div>
                     <Image
                         src="/assets/security.png"
                         alt="security"

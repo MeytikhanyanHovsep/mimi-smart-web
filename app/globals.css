@@ -84,6 +84,12 @@ body {
 }
 
 
+.text-item {
+  grid-area: 4 / 5 / 8 / 20;
+}
+
+
+
 .wall-top-light {
   border-color: #F9FBFC;
 }
@@ -106,12 +112,72 @@ body {
 
 
 
-.home-grid span,
-.home-grid div,
-.home-grid img {
-  transition: 0.7s !important;
+main span,
+main div,
+main img {
+  transition: 0.3s !important;
 }
 
-.home-grid .duration-1000 {
-  transition: 0.7s !important;
+main .duration-1000 {
+  transition: 0.3s !important;
+}
+
+main .duration-500 {
+  transition: 0.3s !important;
+}
+
+
+
+@keyframes ripple-effect {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+@keyframes ripple-effect {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+.ripple-container {
+  position: absolute;
+  width: 100%;
+  transform: scale(0.9);
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.ripple-circle {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  animation: ripple-effect 3s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
+}
+
+/* Задержки для создания последовательных волн */
+.ripple-circle:nth-child(2) {
+  animation-delay: 1s;
+}
+
+.ripple-circle:nth-child(3) {
+  animation-delay: 2s;
 }
