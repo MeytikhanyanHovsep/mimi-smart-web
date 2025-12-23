@@ -30,6 +30,28 @@ body {
   grid-template-rows: repeat(13, 1fr);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+
+  will-change: transform;
+
+  image-rendering: -webkit-optimize-contrast;
+}
+
+@media screen and (max-width:1024px) {
+  .home-grid {
+    grid-template-columns: repeat(10, 1fr) !important;
+  }
+
+}
+
+
+/* Оптимизируем сами картинки внутри айтемов */
+.grid-home img {
+  pointer-events: none;
+  /* Чтобы мышь не триггерила события на каждой картинке */
+  backface-visibility: hidden;
 }
 
 
@@ -84,8 +106,9 @@ body {
 }
 
 
-.text-item {
-  grid-area: 4 / 5 / 8 / 20;
+
+.home-item-13 {
+  grid-area: 2 / 18 / 21 / 21;
 }
 
 
@@ -110,20 +133,18 @@ body {
 }
 
 
-
-
 main span,
 main div,
 main img {
-  transition: 0.3s !important;
+  /* transition: 0.3s; */
 }
 
 main .duration-1000 {
-  transition: 0.3s !important;
+  transition: 0.3s;
 }
 
 main .duration-500 {
-  transition: 0.3s !important;
+  transition: 0.3s;
 }
 
 
@@ -180,4 +201,61 @@ main .duration-500 {
 
 .ripple-circle:nth-child(3) {
   animation-delay: 2s;
+}
+
+/* Оптимизация для всех контейнеров элементов */
+.home-item-container {
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  /* Включает GPU */
+}
+
+/* Глобальное управление картинками через CSS */
+.theme-img {
+  transition: opacity 1s ease-in-out, width 1s ease-in-out !important;
+  will-change: opacity, width;
+}
+
+/* Скрываем темные по умолчанию, светлые показываем */
+.dark-version {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.light-version {
+  opacity: 1;
+}
+
+/* Когда у родителя (body или div) есть класс .dark-mode */
+.dark-mode .dark-version {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.dark-mode .light-version {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Специфическая логика для твоих масок (изменение ширины) */
+.mask-transition {
+  transition: all 1s ease-in-out;
+}
+
+.dark-mode .mask-2-dark {
+  width: 55% !important;
+}
+
+.dark-mode .mask-1-dark {
+  width: 50% !important;
+}
+
+@media screen and (min-width:1024px) {
+
+  .text-item {
+    grid-area: 4 / 5 / 8 / 20;
+  }
 }

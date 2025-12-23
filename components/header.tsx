@@ -16,7 +16,7 @@ export default function Header({}: Props) {
     ];
 
     return (
-        <header className="z-1000 dark:bg-[#0B0D10] bg-[#F4F4F4] absolute top-0 w-full border-b border-[#45454526] transition-colors duration-300">
+        <header className="z-1000 dark:bg-[#0B0D10] bg-[#F4F4F4] absolute top-0 w-full border-b border-[#45454526] px-[30px] max-sm:px-[16px] transition-colors duration-300 max-md:py-[10px]">
             <div className="max-w-[1200px] py-[8px] items-center mx-auto flex justify-between">
                 <Link
                     href="/"
@@ -26,7 +26,7 @@ export default function Header({}: Props) {
                     Smart
                 </Link>
                 <nav>
-                    <ul className="flex items-center gap-[32px]">
+                    <ul className="flex max-lg:hidden items-center gap-[32px]">
                         {menu.map((e, i) => (
                             <li key={i}>
                                 <Link
@@ -41,11 +41,11 @@ export default function Header({}: Props) {
                 </nav>
                 <button
                     className={
-                        "py-[8px] px-[16px] bg-white flex font-bold gap-[5px] items-center dark:bg-[#00D0FF] dark:text-[white] rounded-[20px] text-[14px]"
+                        "py-[8px] px-[16px] bg-white flex font-bold gap-[5px] items-center max-md:aspect-square max-md:rounded-[100%] dark:bg-[#00D0FF] dark:text-[white] rounded-[20px] text-[14px] "
                     }
                 >
                     <Phone className="w-[15px] dark:fill-white fill-black dark:text-white" />
-                    Контакты
+                    <span className="max-md:hidden"> Контакты</span>
                 </button>
             </div>
         </header>

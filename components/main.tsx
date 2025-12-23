@@ -26,6 +26,7 @@ export default function Main({}: Props) {
         const newTheme = theme === "light" ? "dark" : "light";
         setTheme(newTheme);
         localStorage.setItem("theme", newTheme);
+        document.body.classList.toggle("dark-mode");
         document.documentElement.setAttribute("data-theme", newTheme);
     };
 
